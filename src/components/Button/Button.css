@@ -1,0 +1,61 @@
+/* Shared Styles: Applied to ALL button variants */
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  
+  /* Shared Animation Setup */
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Shared Hover Behavior (Applies the lift effect to all buttons) */
+.button:hover {
+  transform: translateY(-1px);
+}
+
+/* Shared Active Behavior (Applies the click down effect to all buttons) */
+.button:active {
+  transform: translateY(0px);
+}
+
+/* --- Color Variants (Only handle colors and shadows) --- */
+
+/* Primary Variant */
+.primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+.primary:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+}
+
+/* Secondary Variant */
+.secondary {
+  background-color: #adff2f;
+  color: #1e293b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.secondary:hover {
+  background-color: #9ef01a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Danger Variant */
+.danger {
+  background-color: #dc2626; /* A clean, striking digital red */
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
+}
+
+.danger:hover {
+  background-color: #b91c1c; /* A slightly darker crimson red on hover */
+  box-shadow: 0 4px 6px rgba(220, 38, 38, 0.3);
+}
+
