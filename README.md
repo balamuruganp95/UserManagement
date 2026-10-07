@@ -1,16 +1,56 @@
-# React + Vite
+# Product Requirements Document (PRD)
+## RBAC User Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Version:** 1.0  
+**Status:** Draft / Development Baseline  
+**Stack:** React.js + TypeScript + Node.js + Express.js + MongoDB  
+**Authentication:** JWT-based authentication  
+**Authorization:** Role-Based Access Control (RBAC)
 
-Currently, two official plugins are available:
+## 1. Product Overview
+The application is a secure web-based User Management System that allows authorized administrators to manage users, roles, and permissions. Access is controlled through RBAC.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 2. Objectives
+- Provide secure user login/logout.
+- Manage users through CRUD operations.
+- Manage roles and permissions.
+- Enforce authorization on both frontend and backend.
+- Provide scalable, maintainable architecture.
+- Maintain audit information for security-sensitive actions.
 
-## React Compiler
+## 3. User Roles
+- Super Admin: Full access.
+- Admin: User and role management according to assigned permissions.
+- User: Basic authenticated access.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 4. MVP Features
+- Login/logout
+- Dashboard
+- User CRUD
+- User activation/deactivation
+- Role CRUD
+- Permission management
+- Role-permission assignment
+- Protected routes
+- Permission-based UI
+- Backend authorization
+- Validation and error handling
+- Audit logging foundation
 
-## Expanding the Oxlint configuration
+## 5. Future Features
+- Refresh-token rotation
+- Forgot/reset password
+- Email verification
+- MFA
+- Bulk import/export
+- Advanced audit-log UI
+- Notifications
+- Redis caching
+- CI/CD and cloud deployment
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 6. Success Criteria
+- Unauthorized users cannot access protected APIs.
+- Users can only perform actions allowed by their permissions.
+- CRUD operations work end-to-end.
+- Validation and errors are consistent.
+- Automated tests cover critical authentication and authorization paths.
